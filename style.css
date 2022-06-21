@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #fdfff4;
+}
+
+.menu {
+    width: 125px;
+    height: 99%;
+    background: linear-gradient(#ff993a, #ffb773);
+    font-size: 20px;
+    float: left;
+    position: fixed;
+    border-radius: 15px;
+    margin: 0.25% 0 0 5px;
+}
+
+.menu > a {
+    position: relative;
+    top: 20px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 80%;
+    height: 50px;
+    text-align: center;
+    float: right;
+    border-radius: 10px 0 0 10px;
+    margin-top: 20px;
+    line-height: 50px;
+    transition: color .5s;
+    color: #fdfff4;
+}
+
+.menu > a:target {
+    color: #2a2a2a;
+    background-color: #fdfff4;
+}
+
+.menu > a::after, .menu > a::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 20px;
+    height: 50px;
+    border-radius: 0 0 25px 0;
+    z-index: -1;
+}
+
+.menu > a::before {
+    top: auto;
+    bottom: -50px;
+    border-radius: 0 25px 0 0;
+}
+
+.menu > a:target::after {
+    box-shadow: 0 25px 0 0 #fdfff4;
+}
+
+.menu > a:target::before {
+    box-shadow: 0 -25px 0 0 #fdfff4;
+}
